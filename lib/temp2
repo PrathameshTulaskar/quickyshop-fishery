@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+
+
+class BusinessName extends StatelessWidget {
+  const BusinessName({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Business Name'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children:<Widget> [
+
+            Container(
+              padding:EdgeInsets.all(15.0),
+              height:200.0,
+              decoration:BoxDecoration(color:Colors.green),
+            ),
+            Row(
+              mainAxisAlignment:MainAxisAlignment.center,
+              children: [
+                Text('This Video Uploaded on !2th Dec 2020 11.00 AM')
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height:100.0,
+                decoration: BoxDecoration(
+                  
+                              color: Colors.green[100],
+                              borderRadius: BorderRadius.all(Radius.circular(18.0)),
+                            ),
+                child: Row(
+                 
+                  children: <Widget>[
+                    CircleAvatar(
+                    radius:50,
+                    backgroundColor: Colors.white,
+                    backgroundImage: AssetImage('images/drink.png'),
+                    ),
+                  Column(
+                     crossAxisAlignment:CrossAxisAlignment.start,
+                     children: [
+                     Text('Macreal Fish (Bangada)',style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      color: Colors.black)),
+                     
+                     
+                    Column(
+                      children: [
+                        Row(
+                           mainAxisAlignment:MainAxisAlignment.center,
+                           children:[
+                             Text('4 Pieces'),
+                             
+                              
+                                    
+                         ]),
+                      ],
+                    ),
+                    Row(
+                                mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                                children: [
+                                   Text('Rs.200/kg'),
+
+                                   
+                                  Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: FlatButton(
+                                      
+                                      color: Colors.red[400],
+                                      child: Text("Add to cart",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: Colors.black)),
+                                                onPressed:(){},),
+                                  ),
+                                ],
+                              ),
+                                   
+                   ],)
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),),
+    );
+  }
+}
